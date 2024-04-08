@@ -1,2 +1,3 @@
-# Cgi.elf
-Cgi using a elf file as in as a scrit
+# go.cmd
+
+run a go command line in isolate eviron
