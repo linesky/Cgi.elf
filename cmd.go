@@ -91,16 +91,17 @@ func scommand(datas string){
 	}
 }
 func sline(datas string){
-	ddatas,err:= ioutil.ReadFile(datas);
+	_,err:= ioutil.ReadFile(datas);
 	if err != nil {
 		fmt.Println(err);
 	}
-	s:=string(ddatas);
+	
 	
 	for{
 	        reader:=bufio.NewReader(os.Stdin)
 	        fmt.Printf(datas);
 	        s,_:=reader.ReadString('\n');
+	        s=strings.Replace(s,"\n","",-1);
 		if s != "" {
 			scommand(s);
 		}

@@ -69,8 +69,8 @@ cp  /usr/bin/ldd $roots/usr/bin
 cp  /usr/bin/ldd $roots/bin
 cp  /usr/bin/cat $roots/usr/bin
 cp  /usr/bin/cat $roots/bin
-cp  /tmp/examples/* $roots/usr/bin
-cp  /tmp/examples/* $roots/bin
+cp  ./cmd $roots/usr/bin
+cp  ./cmd $roots/bin
 printf "" > $roots/dev/null
 printf "" > $roots/dev/stdio
 printf "" > $roots/dev/stdout
