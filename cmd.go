@@ -133,7 +133,7 @@ func sline(datas string){
 }
 
 func main(){
-	
+	fmt.Println("\x1bc\x1b[43;37m");
 	sline(" BLUE> ");
 }
 
