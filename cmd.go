@@ -103,12 +103,11 @@ func sline(datas string){
 	        s,_:=reader.ReadString('\n');
 	        s=strings.Replace(s,"\n","",-1);
 	        s=strings.Replace(s,"\r","",-1);
-		if s != "" {
-			scommand(s);
-		}
+
 		if s == "" {
 		    break
 		}
+
 		if s == "exit\n" {
 		    break
 		}
@@ -126,6 +125,9 @@ func sline(datas string){
 		}
 		if s == "EXIT" {
 		    break
+		}
+		if s != "" {
+			scommand(s);
 		}
 		s="";
 	}
