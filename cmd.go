@@ -93,7 +93,7 @@ func scommand(datas string){
 func sline(datas string){
 	_,err:= ioutil.ReadFile(datas);
 	if err != nil {
-		fmt.Println(err);
+		fmt.Println(datas);
 	}
 	
 	
@@ -102,10 +102,23 @@ func sline(datas string){
 	        fmt.Printf(datas);
 	        s,_:=reader.ReadString('\n');
 	        s=strings.Replace(s,"\n","",-1);
+	        s=strings.Replace(s,"\r","",-1);
 		if s != "" {
 			scommand(s);
 		}
 		if s == "" {
+		    break
+		}
+		if s == "exit\n" {
+		    break
+		}
+		if s == "exit\r" {
+		    break
+		}
+		if s == "EXIT\r" {
+		    break
+		}
+		if s == "EXIT\n" {
 		    break
 		}
 		if s == "exit" {
